@@ -9,11 +9,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 Donate link: http://themeofthecrop.com
 
-Create a menu for restaurants, cafes, bars and eateries and display it in templates, posts, pages and widgets.
+Create a restaurant menu for cafes, bars and eateries, and display it in templates, posts, pages and widgets.
 
 == Description ==
 
-Create a menu for restaurants, cafes, bars and eateries and display it in templates, posts, pages and widgets.
+Create a restaurant menu for cafes, bars and eateries, and display it in templates, posts, pages and widgets.
 
 This plugin creates two new post types, Menu Items and Menus, which can be used to easily construct a menu. Create items on your menu, group them into sections and then build menus out of them.
 
