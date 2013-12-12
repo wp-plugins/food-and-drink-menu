@@ -4,7 +4,7 @@ Author URI: https://github.com/NateWr
 Plugin URL: http://themeofthecrop.com
 Requires at Least: 3.5
 Tested Up To: 3.7.1
-Tags: restaurant, cafe, menu, coffee, food, drink, dining, cuisine
+Tags: restaurant menu, cafe, coffee, restaurant, food, drink, dining, cuisine
 Stable tag: 1.0
 License: GPLv2 or later
 Donate link: http://themeofthecrop.com
@@ -23,6 +23,14 @@ This plugin creates two new post types, Menu Items and Menus, which can be used 
 * Display your menu with a simple shortcode
 * Use the widget to display your menu in a sidebar
 * Responsive menu layout to improve mobile viewing
+
+= How to use =
+
+Read the [documentation](http://themeofthecrop.com/docs/food-and-drink-menu "How to use the Food and Drink Menu plugin") for how to create your menus. Once you've created a menu you can use the widget to add it to a sidebar or include it in any page with a shortcode:
+
+[fdm-menu id=123]
+
+Once you've saved the menu in the admin panel, it will give you the shortcode so you don't need to go hunting for the id.
 
 = Developers =
 
@@ -66,6 +74,13 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/ "Buy the F
 6. Upgrade to Food and Drink Menu Pro at [Theme of the Crop](http://themeofthecrop.com/ "Buy the Food and Drink Menu Pro plugin") for discounted prices, sales and specials, custom dietary icons, and more
 
 == Changelog ==
+= 1.0.1 (2013-12-12) =
+*	Update admin icons to support 3.8
 
 = 1.0 (2013-12-05) =
 *	Initial release
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+This small update will make the Food and Drink Menu compatible with the new admin dashboard style in WordPress 3.8
