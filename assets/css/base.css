@@ -11,8 +11,13 @@
 .fdm-menu,
 .fdm-section {
 	margin: 0;
-	list-style: none;
 	padding: 0;
+}
+.fdm-menu,
+.fdm-menu>li,
+.fdm-section,
+.fdm-section>li {
+	list-style: none;
 }
 .fdm-columns-2 .fdm-column {
 	width: 47%;
@@ -71,18 +76,6 @@
 	top: 0;
 	right: 0;
 	white-space: nowrap;
-}
-
-/**
- * Enlarged layout text size
- ***************************/
-.fdm-layout-enlarged,
-.fdm-layout-enlarged .fdm-section-header h3 {
-	font-size: 150%;
-}
-.fdm-layout-enlarged .fdm-item-panel .fdm-item-title,
-.fdm-layout-enlarged .fdm-src-panel .src-title {
-	font-size: 120%;
 }
 
 /**

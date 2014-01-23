@@ -5,7 +5,7 @@ Plugin URL: http://themeofthecrop.com
 Requires at Least: 3.5
 Tested Up To: 3.8
 Tags: restaurant menu, cafe, coffee, restaurant, food, drink, dining, cuisine
-Stable tag: 1.0.2
+Stable tag: 1.1
 License: GPLv2 or later
 Donate link: http://themeofthecrop.com
 
@@ -20,21 +20,22 @@ This plugin creates two new post types, Menu Items and Menus, which can be used 
 * Unlimited menus and menu items
 * Add a photo and price for each menu item
 * Menu sections can include guidance, such as "All entrees come with a side salad or fries"
-* Display your menu with a simple shortcode
+* Display your menu or menu item in pages and posts, or use the custom post type format
 * Use the widget to display your menu in a sidebar
 * Responsive menu layout to improve mobile viewing
+* Templates to easily customize the output of menus and menu items
 
 = How to use =
 
-Read the [documentation](http://themeofthecrop.com/docs/food-and-drink-menu "How to use the Food and Drink Menu plugin") for how to create your menus. Once you've created a menu you can use the widget to add it to a sidebar or include it in any page with a shortcode:
+Read the [documentation](http://themeofthecrop.com/docs/food-and-drink-menu?utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "How to use the Food and Drink Menu plugin") for how to create your menus. Once you've created a menu you can add it to any menu on your site from the Appearance > Menus area. Alternatively, you can use the widget to add it to a sidebar or include it in any existing page or with a shortcode:
 
-[fdm-menu id=123]
+`[fdm-menu id=123]`
 
 Once you've saved the menu in the admin panel, it will give you the shortcode so you don't need to go hunting for the id.
 
 = Developers =
 
-This plugin is packed with hooks so you can extend and customize it to your delight. A pro addon is coming soon at [Theme of the Crop](http://themeofthecrop.com/ "Buy the Food and Drink Menu Pro plugin"), but you can create your own addons too.
+This plugin is packed with hooks so you can extend and customize it to your delight. A pro addon is coming soon at [Theme of the Crop](http://themeofthecrop.com/?utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin"), but you can create your own addons too.
 
 This plugin is [on GitHub](https://github.com/NateWr/food-and-drink-menu "Food and Drink Menu at Github") so fork it up.
 
@@ -49,7 +50,7 @@ This plugin is [on GitHub](https://github.com/NateWr/food-and-drink-menu "Food a
 
 = Where can I find more documentation? =
 
-There is a full readme file available in the /docs/ folder. You can also learn more at [Theme of the Crop](http://themeofthecrop.com/plugins/food-and-drink-menu "Full information about the WordPress restaurant menu plugin").
+There is a full readme file available in the /docs/ folder. You can also learn more at [Theme of the Crop](http://themeofthecrop.com/plugins/food-and-drink-menu?utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Full information about the WordPress restaurant menu plugin").
 
 = I want more features =
 
@@ -62,7 +63,7 @@ A Pro version is available which features:
 * Google maps to show off local suppliers or ethical sourcing programs
 * Optionally display a single menu item instead of the whole menu
 
-It can be purchased at [Theme of the Crop](http://themeofthecrop.com/ "Buy the Food and Drink Menu Pro plugin").
+It can be purchased at [Theme of the Crop](http://themeofthecrop.com/?utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin").
 
 == Screenshots ==
 
@@ -71,9 +72,19 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/ "Buy the F
 3. Opt to use basic CSS only to adopt your theme's typography
 4. Add menu items with photos like regular WordPress posts
 5. Layout your menu with a point-and-click interface
-6. Upgrade to Food and Drink Menu Pro at [Theme of the Crop](http://themeofthecrop.com/ "Buy the Food and Drink Menu Pro plugin") for discounted prices, sales and specials, custom dietary icons, and more
+6. Upgrade to Food and Drink Menu Pro at [Theme of the Crop](http://themeofthecrop.com/?utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin") for discounted prices, sales and specials, custom dietary icons, and more
 
 == Changelog ==
+
+= 1.1 (2014-01-23) =
+* Major refactor of code to separate concerns
+* Implemented templates to control and customize output of menus and menu items
+* Added new hooks to easily implement custom styles
+* Improved custom post type page output for menus and menu items
+* Try to block more cases where menu items show a bullet point
+* Filter menu item post content so proper formatting is displayed
+* Updated version of Simple Admin Pages used
+
 = 1.0.2 (2013-12-12) =
 *	Bumped the version number to fix tagging issues with WordPress plugin repository
 
@@ -84,6 +95,9 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/ "Buy the F
 *	Initial release
 
 == Upgrade Notice ==
+
+= 1.1 =
+This update entailed a major refactor of the code. It now supports display of single menu items in shortcodes and widgets, templates to customize output of menus and menu items, hooks to implement new styles and more. Learn more at themeofthecrop.com.
 
 = 1.0.2 =
 This small update will make the Food and Drink Menu compatible with the new admin dashboard style in WordPress 3.8
