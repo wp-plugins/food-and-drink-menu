@@ -5,7 +5,7 @@ Plugin URL: http://themeofthecrop.com
 Requires at Least: 3.5
 Tested Up To: 3.8.1
 Tags: restaurant menu, cafe, coffee, restaurant, food, drink, dining, cuisine
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 Donate link: http://themeofthecrop.com
 
@@ -34,6 +34,8 @@ Read the [documentation](http://themeofthecrop.com/docs/food-and-drink-menu?utm_
 Once you've saved the menu in the admin panel, it will give you the shortcode so you don't need to go hunting for the id.
 
 = Developers =
+
+Want to customize the layout? Read [this tutorial](http://themeofthecrop.com/2014/01/28/customize-restaurant-menu-templates/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "How to use templates to customize your restaurant menu") on how to use the plugin's template system to customize the layout. More tutorials will follow, so follow me on [Twitter](https://twitter.com/themeofthecrop) or [Google+](https://plus.google.com/+Themeofthecrop) for more details.
 
 This plugin is packed with hooks so you can extend and customize it to your delight. A pro addon is available at [Theme of the Crop](http://themeofthecrop.com/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin"), but you can create your own addons too.
 
