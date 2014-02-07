@@ -5,7 +5,7 @@ Plugin URL: http://themeofthecrop.com
 Requires at Least: 3.5
 Tested Up To: 3.8.1
 Tags: restaurant menu, cafe, coffee, restaurant, food, drink, dining, cuisine
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 Donate link: http://themeofthecrop.com
 
@@ -63,7 +63,6 @@ A Pro version is available which features:
 * Custom menu item flags to attach any information to any menu item
 * Badges for item features, specials and sales
 * Google maps to show off local suppliers or ethical sourcing programs
-* Optionally display a single menu item instead of the whole menu
 
 It can be purchased at [Theme of the Crop](http://themeofthecrop.com/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin").
 
@@ -77,6 +76,18 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/?utm_source
 6. Upgrade to Food and Drink Menu Pro at [Theme of the Crop](http://themeofthecrop.com/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin") for discounted prices, sales and specials, custom dietary icons, and more
 
 == Changelog ==
+
+= 1.1.4 (2014-02-07) =
+* Fix PHP error notice that appeared if an empty section was rendered (h/t Remco Verweij for reporting)
+
+= 1.1.3 (2014-02-03) =
+* Fix CSS error with the Classic style
+
+= 1.1.2 (2014-01-25) =
+* Minor maintenance release
+
+= 1.1.1 (2014-01-24) =
+* Minor maintenance release
 
 = 1.1 (2014-01-23) =
 * Major refactor of code to separate concerns
@@ -97,6 +108,12 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/?utm_source
 *	Initial release
 
 == Upgrade Notice ==
+
+= 1.1.4 =
+This update fixes a small error that would appear if a menu contained a section with no menu items.
+
+= 1.1.3 =
+This update fixes a problem with the Classic style which prevented the font from appearing on some browsers.
 
 = 1.1 =
 This update entailed a major refactor of the code. It now supports display of single menu items in shortcodes and widgets, templates to customize output of menus and menu items, hooks to implement new styles and more. Learn more at themeofthecrop.com.
