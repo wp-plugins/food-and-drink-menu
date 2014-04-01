@@ -3,7 +3,7 @@
  * Plugin Name: Food and Drink Menu
  * Plugin URI: http://themeofthecrop.com
  * Description: Create a menu for restaurants, cafes, bars and eateries and display it in templates, posts, pages and widgets.
- * Version: 1.2
+ * Version: 1.2.1
  * Author: Nate Wright
  * Author URI: https://github.com/NateWr
  * Requires at least: 3.8
@@ -33,18 +33,18 @@ class fdmFoodAndDrinkMenu {
 		define( 'FDM_MENUITEM_POST_TYPE', 'fdm-menu-item' );
 		
 		// Load template functions
-		require_once( 'functions.php' );
+		require_once( FDM_PLUGIN_DIR . '/functions.php' );
 
 		// Call when plugin is initialized on every page load
 		add_action( 'init', array( $this, 'load_config' ) );
 		add_action( 'init', array( $this, 'load_textdomain' ) );
 
 		// Load custom post types
-		require_once( 'cpts.php' );
+		require_once( FDM_PLUGIN_DIR . '/cpts.php' );
 		$this->cpts = new fdmCustomPostTypes();
 
 		// Load settings
-		require_once( 'settings.php' );
+		require_once( FDM_PLUGIN_DIR . '/settings.php' );
 		$this->settings = new fdmSettings();
 
 		// Call when the plugin is activated
@@ -138,9 +138,9 @@ class fdmFoodAndDrinkMenu {
 	 * @since 1.1
 	 */
 	public function register_widgets() {
-		require_once( 'widgets/WidgetMenu.class.php' );
+		require_once( FDM_PLUGIN_DIR . '/widgets/WidgetMenu.class.php' );
 		register_widget( 'fdmWidgetMenu' );
-		require_once( 'widgets/WidgetMenuItem.class.php' );
+		require_once( FDM_PLUGIN_DIR . '/widgets/WidgetMenuItem.class.php' );
 		register_widget( 'fdmWidgetMenuItem' );
 	}
 
@@ -151,8 +151,7 @@ class fdmFoodAndDrinkMenu {
 	function append_to_content( $content ) {
 		global $post;
 
-		if ( ( FDM_MENU_POST_TYPE !== $post->post_type && FDM_MENUITEM_POST_TYPE !== $post->post_type )
-				|| !is_main_query() || !in_the_loop() ) {
+		if ( !is_main_query() || !in_the_loop() || ( FDM_MENU_POST_TYPE !== $post->post_type && FDM_MENUITEM_POST_TYPE !== $post->post_type ) ) {
 			return $content;
 		}
 
