@@ -35,8 +35,8 @@ class fdmCustomPostTypes {
 		$args = array(
 			'exclude_from_search' => true,
 			'labels' => array(
-				'name' => _x( 'Menus', FDM_TEXTDOMAIN ),
-				'singular_name' => _x( 'Menu', FDM_TEXTDOMAIN ),
+				'name' => __( 'Menus', FDM_TEXTDOMAIN ),
+				'singular_name' => __( 'Menu', FDM_TEXTDOMAIN ),
 				'add_new' => __( 'Add Menu', FDM_TEXTDOMAIN ),
 				'add_new_item' => __( 'Add New Menu', FDM_TEXTDOMAIN ),
 				'edit' => __( 'Edit', FDM_TEXTDOMAIN ),
@@ -79,8 +79,8 @@ class fdmCustomPostTypes {
 			'fdm-menu-section'	=> array(
 				'hierarchy'	=> true,
 				'labels' 	=> array(
-					'name' => _x( 'Menu Sections', 'taxonomy general name', FDM_TEXTDOMAIN ),
-					'singular_name' => _x( 'Menu Section', 'taxonomy singular name', FDM_TEXTDOMAIN ),
+					'name' => __( 'Menu Sections', FDM_TEXTDOMAIN ),
+					'singular_name' => __( 'Menu Section', FDM_TEXTDOMAIN ),
 					'search_items' => __( 'Search Menu Sections', FDM_TEXTDOMAIN ),
 					'all_items' => __( 'All Menu Sections', FDM_TEXTDOMAIN ),
 					'parent_item' => __( 'Menu Section', FDM_TEXTDOMAIN ),
@@ -110,8 +110,8 @@ class fdmCustomPostTypes {
 		$args = array(
 			'exclude_from_search' => true,
 			'labels' => array(
-				'name' => _x( 'Menu Items', FDM_TEXTDOMAIN ),
-				'singular_name' => _x( 'Menu Item', FDM_TEXTDOMAIN ),
+				'name' => __( 'Menu Items', FDM_TEXTDOMAIN ),
+				'singular_name' => __( 'Menu Item', FDM_TEXTDOMAIN ),
 				'add_new' => __( 'Add Menu Item', FDM_TEXTDOMAIN ),
 				'add_new_item' => __( 'Add New Menu Item', FDM_TEXTDOMAIN ),
 				'edit' => __( 'Edit', FDM_TEXTDOMAIN ),
@@ -136,6 +136,9 @@ class fdmCustomPostTypes {
 			),
 			'taxonomies' => array_keys( $menu_item_taxonomies )
 		);
+
+		// Create filter so addons can modify the arguments
+		$args = apply_filters( 'fdm_menu_item_args', $args );
 
 		// Add an action so addons can hook in before the menu is registered
 		do_action( 'fdm_menu_item_pre_register' );
@@ -199,7 +202,8 @@ class fdmCustomPostTypes {
 		);
 
 		// Add menu item price metabox
-		if ( !get_option( 'fdm-disable-price' ) ) {
+		$settings = get_option( 'food-and-drink-menu-settings' );
+		if ( !$settings['fdm-disable-price'] ) {
 			$meta_boxes['fdm_menu_item_price'] = array (
 				'id'		=>	'fdm_item_price',
 				'title'		=> __( 'Price', FDM_TEXTDOMAIN ),

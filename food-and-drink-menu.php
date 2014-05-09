@@ -3,7 +3,7 @@
  * Plugin Name: Food and Drink Menu
  * Plugin URI: http://themeofthecrop.com
  * Description: Create a menu for restaurants, cafes, bars and eateries and display it in templates, posts, pages and widgets.
- * Version: 1.2.2
+ * Version: 1.3
  * Author: Nate Wright
  * Author URI: https://github.com/NateWr
  * Requires at least: 3.8
@@ -28,7 +28,7 @@ class fdmFoodAndDrinkMenu {
 		define( 'FDM_PLUGIN_FNAME', plugin_basename( __FILE__ ) );
 		define( 'FDM_UPGRADE_URL', 'http://themeofthecrop.com/?utm_medium=Plugin%20Upgrade%20Link&utm_campaign=Food%20and%20Drink%20Menu' );
 		define( 'FDM_TEMPLATE_DIR', 'fdm-templates' );
-		define( 'FDM_VERSION', 2 );
+		define( 'FDM_VERSION', 3 );
 		define( 'FDM_MENU_POST_TYPE', 'fdm-menu' );
 		define( 'FDM_MENUITEM_POST_TYPE', 'fdm-menu-item' );
 		
@@ -81,12 +81,14 @@ class fdmFoodAndDrinkMenu {
 	 * @since 1.1
 	 */
 	public function load_config() {
+	
+		$settings = get_option( 'food-and-drink-menu-settings' );
 
 		// Add a thumbnail size for menu items
-		if ( !$fdm_config_thumb_width = get_option( 'fdm-item-thumb-width' ) ) {
+		if ( !$fdm_config_thumb_width = $settings['fdm-item-thumb-width'] ) {
 			$fdm_config_thumb_width = 600;
 		}
-		if ( !$fdm_config_thumb_height = get_option( 'fdm-item-thumb-height' ) ) {
+		if ( !$fdm_config_thumb_height = $settings['fdm-item-thumb-height'] ) {
 			$fdm_config_thumb_height = 600;
 		}
 		add_image_size( 'fdm-item-thumb', intval( $fdm_config_thumb_width ), intval( $fdm_config_thumb_height ), true );
