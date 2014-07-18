@@ -67,11 +67,7 @@ jQuery(document).ready(function ($) {
 					target = 'two';
 				}
 				for (var t = 0; t < ids[i].length; t++) {
-					$('#fdm-menu-column-' + target + ' .fdm-options ul li a').each(function() {
-						if ($(this).data('termid') == ids[i][t]) {
-							$(this).trigger('click');
-						}
-					});
+					$( '#fdm-menu-column-' + target + ' .fdm-options ul li a[data-termid="' + ids[i][t] + '"]' ).trigger( 'click' );
 				}
 			}
 		}
