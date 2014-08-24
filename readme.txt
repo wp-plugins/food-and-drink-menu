@@ -5,7 +5,7 @@ Plugin URL: http://themeofthecrop.com
 Requires at Least: 3.5
 Tested Up To: 3.9.1
 Tags: restaurant menu, cafe, coffee, restaurant, food, drink, dining, cuisine
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 Donate link: http://themeofthecrop.com
 
@@ -40,10 +40,13 @@ Read the [documentation](http://themeofthecrop.com/docs/food-and-drink-menu?utm_
 
 Once you've saved the menu in the admin panel, it will give you the shortcode so you don't need to go hunting for the id.
 
+= Tutorials =
+* [Customize the menu templates](http://themeofthecrop.com/2014/01/28/customize-restaurant-menu-templates/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu)
+* [Create a complex menu layout](http://themeofthecrop.com/2014/07/31/achieve-complex-menu-layouts-food-drink-menu/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu)
+
+More tutorials will follow, so follow me on [Twitter](https://twitter.com/themeofthecrop) or [Google+](https://plus.google.com/+Themeofthecrop) for more details.
+
 = Developers =
-
-Want to customize the layout? Read [this tutorial](http://themeofthecrop.com/2014/01/28/customize-restaurant-menu-templates/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "How to use templates to customize your restaurant menu") on how to use the plugin's template system to customize the layout. More tutorials will follow, so follow me on [Twitter](https://twitter.com/themeofthecrop) or [Google+](https://plus.google.com/+Themeofthecrop) for more details.
-
 This plugin is packed with hooks so you can extend and customize it to your delight. A pro addon is available at [Theme of the Crop](http://themeofthecrop.com/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin"), but you can create your own addons too.
 
 This plugin is [on GitHub](https://github.com/NateWr/food-and-drink-menu "Food and Drink Menu at Github") so fork it up.
@@ -83,6 +86,11 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/?utm_source
 6. Upgrade to Food and Drink Menu Pro at [Theme of the Crop](http://themeofthecrop.com/?utm_source=Plugin&utm_medium=Plugin%20Description&utm_campaign=Food%20and%20Drink%20Menu "Buy the Food and Drink Menu Pro plugin") for discounted prices, sales and specials, custom dietary icons, and more
 
 == Changelog ==
+
+= 1.4.1 (2014-08-24) =
+* Fix: nested `the_content` filters cause plugin conflicts
+* Fix: Menu Section taxonomy should not be hierarchical
+* Update Simple Admin Pages library to v2.0.a.7
 
 = 1.4 (2014-07-18) =
 * Add support for menu and menu item archives, including taxonomies
@@ -145,6 +153,9 @@ It can be purchased at [Theme of the Crop](http://themeofthecrop.com/?utm_source
 *	Initial release
 
 == Upgrade Notice ==
+
+= 1.4.1 =
+This update fixes a conflict with some plugins which would prevent the menus from displaying properly.
 
 = 1.4 =
 This update adds filters and columns to the list of menus and menu items in the admin panel, to help those who manage a lot of menu items. It also adds support for archive pages, so you can now link to a list of all items in a Menu Section (and Item Flag for Pro users).

@@ -88,7 +88,6 @@ class fdmCustomPostTypes {
 
 			// Create menu sections (desserts, entrees, etc)
 			'fdm-menu-section'	=> array(
-				'hierarchy'	=> true,
 				'labels' 	=> array(
 					'name' => __( 'Menu Sections', FDM_TEXTDOMAIN ),
 					'singular_name' => __( 'Menu Section', FDM_TEXTDOMAIN ),
@@ -277,7 +276,7 @@ class fdmCustomPostTypes {
 
 		// Retrieve existing settings
 		global $post;
-		$footer = apply_filters( 'the_content', get_post_meta( $post->ID, 'fdm_menu_footer_content', true ) );
+		$footer = get_post_meta( $post->ID, 'fdm_menu_footer_content', true );
 
 		wp_editor(
 			$footer,
@@ -598,7 +597,7 @@ class fdmCustomPostTypes {
 	 */
 	public function menu_item_posts_filter_query( $query ) {
 
-		if ( !is_admin() || $query->query['post_type'] !== FDM_MENUITEM_POST_TYPE ) {
+		if ( !is_admin() || ( !empty( $query->query['post_type'] ) && $query->query['post_type'] !== FDM_MENUITEM_POST_TYPE ) ) {
 			return;
 		}
 

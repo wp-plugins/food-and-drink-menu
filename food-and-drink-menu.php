@@ -3,11 +3,11 @@
  * Plugin Name: Food and Drink Menu
  * Plugin URI: http://themeofthecrop.com
  * Description: Create a menu for restaurants, cafes, bars and eateries and display it in templates, posts, pages and widgets.
- * Version: 1.4
+ * Version: 1.4.1
  * Author: Nate Wright
  * Author URI: https://github.com/NateWr
  * Requires at least: 3.8
- * Tested up to: 3.9.1
+ * Tested up to: 3.9.2
  *
  * Text Domain: fdmdomain
  * Domain Path: /languages/
@@ -132,7 +132,7 @@ class fdmFoodAndDrinkMenu {
 	 * @since 1.1
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( FDM_TEXTDOMAIN, false, plugin_basename( dirname( __FILE__ ) ) . "/languages" );
+		load_plugin_textdomain( FDM_TEXTDOMAIN, false, plugin_basename( dirname( __FILE__ ) ) . "/languages/" );
 	}
 
 	/**
@@ -165,21 +165,21 @@ class fdmFoodAndDrinkMenu {
 		fdm_load_view_files();
 
 		$args = array(
-			'id'	=> $post->ID
+			'id'	=> $post->ID,
+			'show_content'	=> true
 		);
 		if ( FDM_MENUITEM_POST_TYPE == $post->post_type ) {
 			$args['singular'] = true;
 		}
 		$args = apply_filters( 'fdm_menu_args', $args );
 
-		// Add the content to a menu post type but replace it for single menu items
+		// Initialize and render the view
 		if ( FDM_MENU_POST_TYPE == $post->post_type ) {
 			$menu = new fdmViewMenu( $args );
-			$content .= $menu->render();
 		} else {
 			$menu = new fdmViewItem( $args );
-			$content = $menu->render();
 		}
+		$content = $menu->render();
 
 		// Restore this filter
 		add_action( 'the_content', array( $this, 'append_to_content' ) );
